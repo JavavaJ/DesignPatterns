@@ -23,12 +23,10 @@ public class AsiaServer implements Receiver {
     @Override
     public void shutdown() {
         System.out.println("Asia server: shutdown");
-
     }
 
     @Override
     public void disconnect() {
         System.out.println("Asia server: disconnect");
-
     }
 }

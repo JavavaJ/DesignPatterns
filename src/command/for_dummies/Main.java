@@ -34,14 +34,17 @@ public class Main {
         invoker.setCommand(rebootAsia);
         invoker.run();
 
-        invoker.setCommand(runDiagnosticsAsia);
-        invoker.run();
+        invoker.undo();
+        invoker.undo();
 
-        invoker.setCommand(shutDownEuro);
-        invoker.run();
-
-        invoker.setCommand(runDiagnosticsEuro);
-        invoker.run();
+//        invoker.setCommand(runDiagnosticsAsia);
+//        invoker.run();
+//
+//        invoker.setCommand(shutDownEuro);
+//        invoker.run();
+//
+//        invoker.setCommand(runDiagnosticsEuro);
+//        invoker.run();
 
     }
 

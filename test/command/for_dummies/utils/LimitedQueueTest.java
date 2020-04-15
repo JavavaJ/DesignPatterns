@@ -17,9 +17,11 @@ class LimitedQueueTest {
         limitedQueue.add("five");
 
         System.out.println(limitedQueue);
+        System.out.println("Last: " + limitedQueue.getLast());
 
         assertEquals(3, limitedQueue.size());
         assertEquals("five", limitedQueue.get(2));
+        assertEquals("five", limitedQueue.getLast());
     }
 
 }
