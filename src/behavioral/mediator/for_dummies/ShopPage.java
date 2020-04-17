@@ -17,7 +17,8 @@ public class ShopPage {
 
     public void go() {
         System.out.println("Ready to purchase? [y/n]? ");
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader reader = new BufferedReader(
+            new InputStreamReader(System.in));
 
         try {
             response = reader.readLine();

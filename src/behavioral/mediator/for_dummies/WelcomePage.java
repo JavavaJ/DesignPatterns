@@ -17,7 +17,8 @@ public class WelcomePage {
 
     public void go() {
         System.out.println("Wanna shop? [y/n]");
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader reader = new BufferedReader(
+            new InputStreamReader(System.in));
         try {
             response = reader.readLine();
         } catch (IOException e) {

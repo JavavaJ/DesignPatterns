@@ -17,7 +17,8 @@ public class PurchasePage {
 
     public void go() {
         System.out.println("Buy the item now? [y/n]? ");
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader reader = new BufferedReader(
+            new InputStreamReader(System.in));
 
         try {
             response = reader.readLine();
