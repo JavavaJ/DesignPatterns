@@ -13,13 +13,13 @@ public class SimpleTextChat implements Chat {
     }
 
     @Override
-    public void setAdmin(User admin) {
-        this.admin = admin;
+    public void addUserToChat(User user) {
+        users.add(user);
     }
 
     @Override
-    public void addUserToChat(User user) {
-        users.add(user);
+    public void setAdmin(User admin) {
+        this.admin = admin;
     }
 
     @Override

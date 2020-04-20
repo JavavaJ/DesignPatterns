@@ -17,6 +17,7 @@ public class SimpleUser implements User {
 
     @Override
     public void getMessage(String message) {
-        System.out.println(this.name + " messaged received: " + message);
+        System.out.println(this.name +
+            " messaged received: " + message);
     }
 }

@@ -17,11 +17,20 @@ public class StockMediator implements Mediator {
     }
 
     @Override
+    public void addColleague(Colleague colleague) {
+        colleagues.add(colleague);
+        colleagueCode++;
+        colleague.setColleagueCode(colleagueCode);
+    }
+
+    @Override
     public void saleOffer(String stock, int shares, int colleagueCode) {
         boolean stockSold = false;
         for (StockOffer offer : stockBuyOffers) {
-            if ((offer.getStockSymbol().equals(stock)) && (offer.getStockShares() == shares)) {
-                System.out.println(shares + " shares of " + stock + " sold to colleague code " + offer.getColleagueCode());
+            if ((offer.getStockSymbol().equals(stock)) &&
+                (offer.getStockShares() == shares)) {
+                System.out.println(shares + " shares of " + stock +
+                    " sold to colleague code " + offer.getColleagueCode());
                 stockBuyOffers.remove(offer);
                 stockSold = true;
             }
@@ -40,8 +49,10 @@ public class StockMediator implements Mediator {
     public void buyOffer(String stock, int shares, int colleagueCode) {
         boolean stockBought = false;
         for (StockOffer offer : stockSellOffers) {
-            if ((offer.getStockSymbol().equals(stock)) && (offer.getStockShares() == shares)) {
-                System.out.println(shares + " shares of " + stock + " bought by colleague code " + offer.getColleagueCode());
+            if ((offer.getStockSymbol().equals(stock)) &&
+                (offer.getStockShares() == shares)) {
+                System.out.println(shares + " shares of " + stock +
+                    " bought by colleague code " + offer.getColleagueCode());
                 stockSellOffers.remove(offer);
                 stockBought = true;
             }
@@ -66,12 +77,5 @@ public class StockMediator implements Mediator {
         for (StockOffer offer : stockBuyOffers) {
             System.out.println(offer.getStockShares() + " of " + offer.getStockSymbol());
         }
-    }
-
-    @Override
-    public void addColleague(Colleague colleague) {
-        colleagues.add(colleague);
-        colleagueCode++;
-        colleague.setColleagueCode(colleagueCode);
     }
 }
