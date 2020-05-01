@@ -19,8 +19,6 @@ public class GumballMachineTest {
         gumballMachine.turnCrank();
 
         System.out.println(gumballMachine);
-
-
     }
 
 }
